@@ -59,6 +59,15 @@ a { color: var(--primary); }
 }
 
 
+.banner-msg { display: none; }
+.banner-mobile { display: inline; }
+
+@media (min-width: 761px) {
+  .banner-mobile { display: none; }
+  .banner-desktop { display: inline; }
+}
+
+
 .site-header, .container, .support-strip, .site-footer {
   max-width: 980px;
   margin-inline: auto;
