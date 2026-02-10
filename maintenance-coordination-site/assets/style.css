@@ -53,6 +53,12 @@ a { color: var(--primary); }
   text-align: center;
 }
 
+.emergency-banner a {
+  color: inherit;
+  font-weight: 800;
+}
+
+
 .site-header, .container, .support-strip, .site-footer {
   max-width: 980px;
   margin-inline: auto;
