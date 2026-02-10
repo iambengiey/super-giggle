@@ -8,9 +8,10 @@ permalink: /how-it-works/
 
 ## For tenants
 
-- Use your complex page.
+- Open the Tenant page.
 - Click **Log a maintenance issue**.
 - Submit clear details and photos where possible.
+- Requests are verified against the managing agent register (unit + mobile).
 
 ## For landlords and agents
 

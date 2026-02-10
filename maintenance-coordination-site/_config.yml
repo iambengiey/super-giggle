@@ -5,3 +5,5 @@ baseurl: ""
 markdown: kramdown
 theme: null
 ga4_measurement_id: "G-M3MJGMR2GD"
+tenant_intake_form_url: "https://forms.gle/REPLACE_ME"
+privacy_contact_email: "privacy@urbantenantsolutions.co.za"

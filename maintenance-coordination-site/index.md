@@ -3,21 +3,12 @@ layout: default
 title: Home
 ---
 
-# Friendly maintenance coordination for your complex
+# Calm maintenance coordination for landlords and managing agents
 
-We help landlords and managing agents keep maintenance organised, transparent, and calm.
+Urban Tenant Solutions helps you run maintenance intake with clear process, objective triage, and privacy-first handling.
 
-<div class="chips" aria-label="Severity levels">
-  <span class="chip chip-emergency">Emergency</span>
-  <span class="chip chip-urgent">Urgent</span>
-  <span class="chip chip-routine">Routine</span>
-</div>
+## Tenant reporting
 
-## How it works
+Tenants should use the dedicated tenant entry page.
 
-1. Tenant selects the correct complex page.
-2. Tenant logs the issue through the Google Form.
-3. Team triages and coordinates by severity.
-4. Landlord or agent receives structured updates.
-
-[View all complexes]({{ '/complexes/' | relative_url }})
+[Go to Tenant entry]({{ '/tenant/' | relative_url }})

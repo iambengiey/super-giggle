@@ -6,7 +6,7 @@ permalink: /contact/
 
 # Contact
 
-For maintenance, tenants must use the form on their complex page.
+For maintenance, tenants must use the form on the tenant page.
 
 ## Landlords and managing agents
 

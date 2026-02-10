@@ -5,12 +5,74 @@
 <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
 <link rel="icon" href="{{ '/assets/logo.svg' | relative_url }}" type="image/svg+xml">
 
+{% if page.noindex or (page.url and page.url contains '/c/') %}
+<meta name="robots" content="noindex, nofollow">
+{% endif %}
+
 {% if site.ga4_measurement_id %}
-<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.ga4_measurement_id }}"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', '{{ site.ga4_measurement_id }}');
+
+  gtag('consent', 'default', {
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied',
+    analytics_storage: 'denied'
+  });
+
+  (function() {
+    var key = 'ga_consent_choice';
+    var id = '{{ site.ga4_measurement_id }}';
+
+    function loadGA() {
+      if (window.__gaLoaded) return;
+      window.__gaLoaded = true;
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(id);
+      document.head.appendChild(s);
+      gtag('js', new Date());
+      gtag('config', id);
+    }
+
+    window.applyConsent = function(choice) {
+      if (choice === 'accept') {
+        localStorage.setItem(key, 'accept');
+        gtag('consent', 'update', {
+          ad_storage: 'granted',
+          ad_user_data: 'granted',
+          ad_personalization: 'granted',
+          analytics_storage: 'granted'
+        });
+        loadGA();
+      } else {
+        localStorage.setItem(key, 'reject');
+        gtag('consent', 'update', {
+          ad_storage: 'denied',
+          ad_user_data: 'denied',
+          ad_personalization: 'denied',
+          analytics_storage: 'denied'
+        });
+      }
+      var el = document.getElementById('consent-banner');
+      if (el) el.hidden = true;
+    };
+
+    document.addEventListener('DOMContentLoaded', function() {
+      var choice = localStorage.getItem(key);
+      var banner = document.getElementById('consent-banner');
+      if (!choice && banner) banner.hidden = false;
+      if (choice === 'accept') {
+        gtag('consent', 'update', {
+          ad_storage: 'granted',
+          ad_user_data: 'granted',
+          ad_personalization: 'granted',
+          analytics_storage: 'granted'
+        });
+        loadGA();
+      }
+    });
+  })();
 </script>
 {% endif %}
