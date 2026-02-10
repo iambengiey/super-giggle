@@ -1,0 +1,22 @@
+- slug: ja-inga
+  name: "Ja Inga"
+  city: "Johannesburg"
+  intake_form_url: "https://forms.gle/REPLACE_ME_JA_INGA"
+  landlord_whatsapp_url: "https://wa.me/27828754089"
+  landlord_email: "primeprop@p-p-i.co.za"
+  local_emergency:
+    police: "011 375 5911"
+    ambulance_fire: "10177"
+    municipality_emergency: "011 375 5555"
+  building_rules_url: ""
+
+- slug: savona
+  name: "Savona"
+  city: "Edenglen, Edenvale"
+  intake_form_url: "https://forms.gle/REPLACE_ME_SAVONA"
+  landlord_whatsapp_url: "https://wa.me/27828754089"
+  landlord_email: "admin@eagleblue.co.za"
+  local_emergency:
+    police: "011 681 3600"
+    ambulance_fire: "10177"
+  building_rules_url: ""
