@@ -6,6 +6,11 @@ permalink: /contact/
 
 # Contact
 
-For maintenance, tenants must use their complex form page.
+For maintenance, tenants must use the form on their complex page.
 
-General admin queries can be directed to your managing agent listed on your complex page.
+## Landlords and managing agents
+
+- WhatsApp: <a href="https://wa.me/27828754089" target="_blank" rel="noopener">+27 82 875 4089</a>
+- Email: <a href="mailto:admin@example.com">admin@example.com</a>
+
+No contractor numbers are published to tenants.

@@ -6,7 +6,14 @@ permalink: /how-it-works/
 
 # How it works
 
-1. Select your complex.
-2. Submit the maintenance form.
-3. We triage by urgency and contractor availability.
-4. You receive status updates through the normal channel.
+## For tenants
+
+- Use your complex page.
+- Click **Log a maintenance issue**.
+- Submit clear details and photos where possible.
+
+## For landlords and agents
+
+- Receive cleaner intake information.
+- Prioritise incidents consistently.
+- Keep records centralised without sharing contractor numbers with tenants.

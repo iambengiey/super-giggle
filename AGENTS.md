@@ -1,7 +1,10 @@
 # Repository Rules
 
-- Do not commit tenant personal identifiable information (PII).
-- Avoid over-engineering; prefer simple, maintainable Jekyll patterns.
-- Keep copy concise, clear, and calm.
-- Emergency definitions must stay objective and practical.
-- Use British English spelling across all content.
+- Do not store personal data or tenant PII in the repository.
+- Do not publish contractor phone numbers anywhere on the site.
+- Use British English spelling and a calm, friendly, factual tone.
+- Keep implementation simple (static Jekyll pages, minimal complexity).
+- Always distinguish:
+  - life-threatening emergencies (public emergency services), and
+  - maintenance emergencies (urgent building incidents).
+- GBV support content must remain discreet, factual, and direct users to official services.
