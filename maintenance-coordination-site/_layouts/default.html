@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    {% include head.html %}
+  </head>
+  <body>
+    <div class="emergency-banner" role="status" aria-live="polite">
+      <span class="banner-msg banner-mobile">
+        🚨 Life-threatening emergency: Tap to call <a href="tel:10111">SAPS 10111</a> or <a href="tel:112">112</a> immediately.
+      </span>
+      <span class="banner-msg banner-desktop">
+        🚨 Life-threatening emergency: Call SAPS 10111 or 112 (mobile) immediately. <a href="tel:10111">Call 10111</a> · <a href="tel:112">Call 112</a>
+      </span>
+    </div>
+    {% include header.html %}
+    <main class="container">
+      {{ content }}
+    </main>
+    {% include footer.html %}
+  </body>
+</html>

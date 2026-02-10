@@ -1,0 +1,76 @@
+---
+layout: default
+---
+{% assign complex = site.data.complexes | where: "slug", page.complex_slug | first %}
+
+{% if complex %}
+<article class="complex-page">
+  <h1>{{ complex.name }}</h1>
+  <p class="muted">{{ complex.city }}</p>
+
+  <p class="hero-cta">
+    <a class="button button-large" href="{{ complex.intake_form_url }}" target="_blank" rel="noopener">Log a maintenance issue</a>
+  </p>
+
+  <div class="chips" aria-label="Severity levels">
+    <span class="chip chip-emergency">Emergency</span>
+    <span class="chip chip-urgent">Urgent</span>
+    <span class="chip chip-routine">Routine</span>
+  </div>
+
+  <section class="card">
+    <h2>What counts as a maintenance emergency</h2>
+    <ul>
+      <li>Active water leak causing ongoing damage.</li>
+      <li>Electrical hazard such as exposed live wiring or burning smell.</li>
+      <li>Sewer overflow affecting hygiene and safe use.</li>
+      <li>Loss of an essential service that creates immediate risk.</li>
+    </ul>
+    <p class="muted">For life-threatening emergencies, call <a href="tel:10111">SAPS 10111</a> or <a href="tel:112">112 (mobile)</a>.</p>
+  </section>
+
+  <section class="card">
+    <h2>What NOT to do</h2>
+    <ul>
+      <li>Do not call contractors directly.</li>
+      <li>Do not call the owner for maintenance logging.</li>
+      <li>Do not WhatsApp maintenance issues.</li>
+    </ul>
+    <p>Tenants must use the form above for all maintenance requests.</p>
+  </section>
+
+  <section class="card">
+    <h2>Landlords and managing agents only</h2>
+    <p>
+      <a href="{{ complex.landlord_whatsapp_url }}" target="_blank" rel="noopener">WhatsApp (landlords/agents only)</a><br>
+      <a href="mailto:{{ complex.landlord_email }}">{{ complex.landlord_email }}</a>
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>Emergency numbers</h2>
+    {% if complex.local_emergency %}
+      <ul>
+        {% if complex.local_emergency.police %}{% assign police_tel = complex.local_emergency.police | replace: ' ', '' | replace: '(', '' | replace: ')', '' | replace: '-', '' %}<li>Police: <a href="tel:{{ police_tel }}">{{ complex.local_emergency.police }}</a></li>{% endif %}
+        {% if complex.local_emergency.ambulance_fire %}{% assign af_tel = complex.local_emergency.ambulance_fire | replace: ' ', '' | replace: '(', '' | replace: ')', '' | replace: '-', '' %}<li>Ambulance / Fire: <a href="tel:{{ af_tel }}">{{ complex.local_emergency.ambulance_fire }}</a></li>{% endif %}
+        {% if complex.local_emergency.municipality_emergency %}{% assign mun_tel = complex.local_emergency.municipality_emergency | replace: ' ', '' | replace: '(', '' | replace: ')', '' | replace: '-', '' %}<li>Municipality emergency: <a href="tel:{{ mun_tel }}">{{ complex.local_emergency.municipality_emergency }}</a></li>{% endif %}
+      </ul>
+    {% else %}
+      <ul>
+        <li>SAPS: <a href="tel:10111">10111</a></li>
+        <li>Ambulance / Fire: <a href="tel:10177">10177</a></li>
+        <li>Mobile emergency: <a href="tel:112">112</a></li>
+      </ul>
+    {% endif %}
+  </section>
+
+  {% if complex.building_rules_url and complex.building_rules_url != "" %}
+  <p><a href="{{ complex.building_rules_url }}" target="_blank" rel="noopener">View building rules</a></p>
+  {% endif %}
+
+  <a class="mobile-sticky-cta" href="{{ complex.intake_form_url }}" target="_blank" rel="noopener">Log an issue</a>
+</article>
+{% else %}
+<h1>Complex not found</h1>
+<p>Please return to the <a href="{{ '/complexes/' | relative_url }}">complex list</a>.</p>
+{% endif %}
