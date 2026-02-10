@@ -1,0 +1,17 @@
+- slug: ja-inga
+  name: "Ja Inga"
+  city: "Johannesburg"
+  intake_form_url: "https://forms.gle/REPLACE_ME"
+  emergency_contacts_note: "If there is immediate danger to life, call emergency services first."
+  landlord_whatsapp_url: "https://wa.me/27828754089"
+  managing_agent_email: "primeprop@p-p-i.co.za"
+  managing_agent_tel: "(011) 887-5244"
+
+- slug: savona
+  name: "Savona"
+  city: "Johannesburg"
+  intake_form_url: "https://forms.gle/REPLACE_ME"
+  emergency_contacts_note: "If there is immediate danger to life, call emergency services first."
+  landlord_whatsapp_url: "https://wa.me/27828754089"
+  managing_agent_email: "admin@eagleblue.co.za"
+  managing_agent_tel: "(086) 132-4532"
