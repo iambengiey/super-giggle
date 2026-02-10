@@ -1,0 +1,36 @@
+---
+layout: default
+---
+{% assign complex = site.data.complexes | where: "slug", page.complex_slug | first %}
+
+{% if complex %}
+<h1>{{ complex.name }}</h1>
+<p class="muted">{{ complex.city }}</p>
+
+<p>
+  <a class="button" href="{{ complex.intake_form_url }}" target="_blank" rel="noopener">Log a maintenance issue</a>
+</p>
+
+<section>
+  <h2>What counts as an emergency</h2>
+  <p>An emergency is a severe risk to life, safety, or major property damage. Examples include active fire, gas leaks, exposed live electrical hazards, and flooding that cannot be contained.</p>
+  <p>{{ complex.emergency_contacts_note }}</p>
+</section>
+
+<section>
+  <h2>Contact rules</h2>
+  <p>Tenants must use the maintenance form for all requests. No phone calls for maintenance logging.</p>
+  <p>
+    <a href="{{ complex.landlord_whatsapp_url }}" target="_blank" rel="noopener">Landlords only WhatsApp</a>
+  </p>
+</section>
+
+<section>
+  <h2>Managing agent</h2>
+  <p>Email: <a href="mailto:{{ complex.managing_agent_email }}">{{ complex.managing_agent_email }}</a><br>
+  Tel: {{ complex.managing_agent_tel }}</p>
+</section>
+{% else %}
+<h1>Complex not found</h1>
+<p>Please return to the <a href="{{ '/complexes/' | relative_url }}">complex list</a>.</p>
+{% endif %}
