@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    {% include head.html %}
+  </head>
+  <body>
+    <div class="emergency-banner" role="status" aria-live="polite">
+      🚨 Life-threatening emergency: Call <a href="tel:10111">SAPS 10111</a> or <a href="tel:112">112 (mobile)</a> immediately.
+    </div>
+    {% include header.html %}
+
+    <main class="container">
+      {{ content }}
+    </main>
+
+    <aside id="consent-banner" class="consent-banner" hidden aria-label="Analytics consent">
+      <p>We use optional analytics cookies to improve this website. You can accept or reject.</p>
+      <div class="consent-actions">
+        <button type="button" class="consent-btn" onclick="applyConsent('accept')">Accept</button>
+        <button type="button" class="consent-btn consent-btn-alt" onclick="applyConsent('reject')">Reject</button>
+      </div>
+    </aside>
+
+    {% include footer.html %}
+  </body>
+</html>
